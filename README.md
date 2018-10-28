@@ -11,11 +11,11 @@ In the unrestricted mode, after the guess, the program asks player whether this 
 
 ![](misc/input1.png) ![](misc/input2.png)
 
-## Tree structure represents a simple neural network 
-Each question is a node in the tree, and the tree of questions represents a network of possible paths the program can traverse based on the answers of the player. QuestionTree.java defines a tree of questions (with methods to set and get the root). TreeNode.java defines a node in the tree (with methods to get and set data, get and set left and right children, and check whether a node has leaves or not). 
+## Decision tree represents a simple neural network 
+Each question is a node in a basic decision tree. The tree of questions represents a network of possible paths the program can traverse based on the answers of the player. QuestionTree.java defines a tree of questions (with methods to set and get the root). TreeNode.java defines a node in the tree (with methods to get and set data, get and set left and right children, and check whether a node has leaves or not). 
 
-## xml file stores a potential arrangment of the tree
-This program uses xml file
+## XML file stores a potential arrangment of the tree
+This program uses an XML file as a starting point for a possible arrangement of the tree. Tree.xml is an example structure of questions and answers presented in the game. The program calls QuestionFileReader.java, which uses JAXP - a XML reading API provided by Java - to translate XML file into a format Java programs can use.
 
 ## 
 
