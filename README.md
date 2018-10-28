@@ -6,10 +6,12 @@ In this simple version of the game, the program gives player a small list of opt
 
 ![](misc/question.png) ![](misc/answer.png)
 
-In the unrestricted mode, after the final answer, the program asks player whether this is the correct asnwer.
+In the unrestricted mode, after the final answer, the program asks player whether this is the correct asnwer. If the player chooses No, the program then proceeds to ask for the player's answer, a question that detect the correct answer, and whether the answer to that question is Yes or No. All of this information is saved into the game for the next round, or the program "learns" from the player. 
+
+![](misc/input1.png) ![](misc/input2.png)
 
 ## Tree structure represents a simple neural network 
- each question is a node in the tree, and the tree of questions represents a network of possible paths the program can traverse based on the answers of the player. QuestionTree.java defines a tree of questions (with methods to set and get the root). TreeNode.java defines a node in the tree (with methods to get and set data, get and set left and right children, and check whether a node has leaves or not). 
+Each question is a node in the tree, and the tree of questions represents a network of possible paths the program can traverse based on the answers of the player. QuestionTree.java defines a tree of questions (with methods to set and get the root). TreeNode.java defines a node in the tree (with methods to get and set data, get and set left and right children, and check whether a node has leaves or not). 
 
 ## xml file stores a potential arrangment of the tree
 This program uses xml file
