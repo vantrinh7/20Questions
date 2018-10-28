@@ -12,15 +12,10 @@ In the unrestricted mode, after the guess, the program asks player whether this 
 ![](misc/input1.png) ![](misc/input2.png)
 
 ## Decision tree represents a simple neural network 
-Each question is a node in a basic decision tree. The tree of questions represents a network of possible paths the program can traverse based on the answers of the player. QuestionTree.java defines a tree of questions (with methods to set and get the root). TreeNode.java defines a node in the tree (with methods to get and set data, get and set left and right children, and check whether a node has leaves or not). 
+Each question is a node in a basic decision tree. The tree of questions represents a network of possible paths the program can traverse based on the answers of the player. QuestionTree.java defines a tree of questions (with methods to set and get the tree root). TreeNode.java defines a node in the tree (with methods to get and set the node's data, get and set the node's children, and check whether it has leaves or not). 
 
 ## XML file stores a potential arrangment of the tree
-This program uses an XML file as a starting point for a possible arrangement of the tree. Tree.xml is an example structure of questions and answers presented in the game. The program calls QuestionFileReader.java, which uses JAXP - a XML reading API provided by Java - to translate XML file into a format Java programs can use.
+This program uses an XML file as a starting point for a possible arrangement of the tree. Tree.xml is an example structure of questions and answers presented in the game. The program then calls QuestionFileReader.java, which uses JAXP - a XML reading API provided by Java - to translate XML file into a format Java programs can use.
 
-## 
-
-
-## File Description
-
-
-* GuessingGameController and Unrestri
+## Unrestricted game modifies the question tree
+In the restricted mode, the program uses the information from the existing question tree, but does not modify it. In the unrestricted mode, the progam uses the player's input to create new nodes of question and answer. GuessingGameController.java and UnrestrictedGuessingGameController.java are classes that create the view, handle button click events and define each mode. GuessingGameGUIApplication.java and UnrestrictedGuessingGameGUIApplication.java have the main method and create the JFrame that holds the view. 
